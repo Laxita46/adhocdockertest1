@@ -1,0 +1,19 @@
+Q1  docker build -t alpine:laxita .
+       docker run --name laxitac1q1 -d alpine:laxita sh date+%T> q1.txt
+      docker start laxitac1q1
+      docker run -it alpine:laxita sh
+      ls
+      cat q1.txt
+
+Q2  docker build -t adhoc:laxita https://github.com/redashu/summer2020dockertest.git
+
+docker tag adhoc:laxita1 laxita/adhoc:laxita1
+
+dockerlogin
+
+docker push laxita/adhoc:laxita1
+
+Q3 docker pull dockerashu/ckad:v2
+      
+Q5 docker volume create laxitaq5
+      docker run -it --name laxitac5q5 -v laxitaq5:/etc/passwd -v laxita2:/adhocvol/user.txt alpine sh
